@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h4>Ada Rekomendasi?<span style="color: red">*</span></h4>
+    <form>
+      <select
+        name="rekomendasi"
+        class="select_rekomendasi"
+        id="rekomendasi"
+        onchange="changeLabel(this)"
+      >
+        <option disable hidden selected="">Pilih</option>
+        <option value="A">Ada</option>
+        <option value="T">Tidak</option>
+      </select>
+      <button type="button" onclick="">Kirim</button>
+      <div id="name_wrapper">
+        <br /><br />
+        <label for="" id="text_change"
+          >Nama Lengkap Rekomendasi<span style="color: red">*</span></label
+        >
+        <br />
+        <select
+          name="Kategori"
+          class="select_kategori"
+          id="kategori"
+          onchange="changeRekomen(this)"
+        >
+          <option disable hidden selected="">Pilih</option>
+          <option value="BRI">Pekerja BRI</option>
+          <option value="P">Purnabakti</option>
+        </select>
+        <br /><br />
+        <div id="nomor">
+            <label for="" id="text_first"
+          >Jabatan Perekomendasi <span style="color: red">*</span></label
+        >
+        <br />
+        <input type="text" value="" />
+          
+    </div>
+    <label for="" id="text_change"
+    >Nomor ID Pegawai/KTA/PN/MP<span style="color: red">*</span></label
+  >
+
+
+<input type="text" value="" />
+
+<br />
+   
+      </div>
+    </form>
+    <script>
+      function changeLabel(e) {
+        let nameWrapper = document.getElementById("name_wrapper");
+        if (e.value == "A") {
+          nameWrapper.style.display = "block";
+        } else {
+          nameWrapper.style.display = "none";
+        }
+      }
+
+      function changeRekomen(e) {
+       
+        let textChange = document.getElementById("text_change");
+            let nameWrapper = document.getElementById("nomor");
+        if (e.value == "BRI") {
+          nameWrapper.style.display = "block";
+        } else {
+          nameWrapper.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
